@@ -1,5 +1,8 @@
 # GoWebApiApp
 
+**Must have:**
+* (Go Best Practices)[https://github.com/codeship/go-best-practices]
+
 ---
 
 Создание REST API.
@@ -16,3 +19,24 @@ Golang WebApp. ApiServer
 * Также изучил способ передавать в уже собранное приложение флаги с помощью библиотеки flags. Установил флаг, позволяющий передавать файл конфига. Подробнее об этой библе (тут)[https://pkg.go.dev/flag#Parse]
 
 Список использованных библиотек: testify (testing, assert), mux, toml, logrus, zerolog, flags, net (http, http/httptest), io, log
+
+---
+
+Урок 2. Работа с БД
+
+* На данный момент научился создавать подключение к бд PostgreSQL, расширил конфиги
+* Научился создавать миграции, для этого использовал инструмент migrate. Для этого скачал менеджер пакетов scoop, он аналогичен choco. При создании миграций возникали проблемы: 
+    * С неправильной строкой подключения (тут чисто я накосячил). Решение: postgres://postgres:pass@localhost:5432/restapi_db?sslmode=disable; 
+    * Error: Dirty database version X. Fix and force version. Решение: можно снести саму базу, либо удалить в ней системную таблицу мигнаций (должны быть более цивилизованные способы решения проблемы, чем полное удаление);
+    * No migration found for version X. Решение: использовать команду force для переключения версии.  
+* Приобрел навык работы с postgres через терминал. Например команды: \dt, \l, \c <dbname>
+
+Полезные ссылки по миграциям: 
+* (Golang-migrate returns "no change")[https://stackoverflow.com/questions/75053949/golang-migrate-returns-no-change]
+* (Migrate psql tutorial)[https://github.com/golang-migrate/migrate/blob/master/database/postgres/TUTORIAL.md]
+* (Чиним dirty migration с помощью restore api)[https://support.hashicorp.com/hc/en-us/articles/15166228647571--no-migration-found-for-version-Error-Encountered-After-Using-the-Restore-API-to-Restore-Terraform-Enterprise]
+* (FreeCodeCamp migration guide)[https://www.freecodecamp.org/news/database-migration-golang-migrate/]
+
+Список новых tool'ов: migrate, scoop, psql, lib/pq
+
+Также есть инфа по использованию lib'ы (database/sql)[http://go-database-sql.org/]
