@@ -1,7 +1,7 @@
 # GoWebApiApp
 
 **Must have:**
-* (Go Best Practices)[https://github.com/codeship/go-best-practices]
+* [Go Best Practices](https://github.com/codeship/go-best-practices)
 
 ---
 
@@ -16,7 +16,7 @@ Golang WebApp. ApiServer
 * Узнал о библиотеке для роутинга веб сервера mux. Ничего не понятно, надо углублятся
 * Узнал о формате .toml и об одноименной библиотеке для работы с этим конфиг форматом. Есть ещё варианты конфигурировать приложение с помощью .yml и .json
 * Узнал о библиотеке для логгирования работы сервера logrus, как и с mux, ничего не ясно, необходимо будет дополнительно углубится, почему нельзя использовать для этого стандартный log. Что за библиотека zerolog
-* Также изучил способ передавать в уже собранное приложение флаги с помощью библиотеки flags. Установил флаг, позволяющий передавать файл конфига. Подробнее об этой библе (тут)[https://pkg.go.dev/flag#Parse]
+* Также изучил способ передавать в уже собранное приложение флаги с помощью библиотеки flags. Установил флаг, позволяющий передавать файл конфига. Подробнее об этой библе [тут](https://pkg.go.dev/flag#Parse)
 
 Список использованных библиотек: testify (testing, assert), mux, toml, logrus, zerolog, flags, net (http, http/httptest), io, log
 
@@ -35,16 +35,16 @@ Golang WebApp. ApiServer
 
 
 Полезные ссылки по миграциям: 
-* (Golang-migrate returns "no change")[https://stackoverflow.com/questions/75053949/golang-migrate-returns-no-change]
-* (Migrate psql tutorial)[https://github.com/golang-migrate/migrate/blob/master/database/postgres/TUTORIAL.md]
-* (Чиним dirty migration с помощью restore api)[https://support.hashicorp.com/hc/en-us/articles/15166228647571--no-migration-found-for-version-Error-Encountered-After-Using-the-Restore-API-to-Restore-Terraform-Enterprise]
-* (FreeCodeCamp migration guide)[https://www.freecodecamp.org/news/database-migration-golang-migrate/]
+* [Golang-migrate returns "no change"](https://stackoverflow.com/questions/75053949/golang-migrate-returns-no-change)
+* [Migrate psql tutorial](https://github.com/golang-migrate/migrate/blob/master/database/postgres/TUTORIAL.md)
+* [Чиним dirty migration с помощью restore api](https://support.hashicorp.com/hc/en-us/articles/15166228647571--no-migration-found-for-version-Error-Encountered-After-Using-the-Restore-API-to-Restore-Terraform-Enterprise)
+* [FreeCodeCamp migration guide](https://www.freecodecamp.org/news/database-migration-golang-migrate/)
 
 Список новых tool'ов: migrate, scoop, psql, lib/pq
 
-Также есть инфа по использованию lib'ы (database/sql)[http://go-database-sql.org/]
+Также есть инфа по использованию lib'ы [database/sql](http://go-database-sql.org/)
 
-Для тестирования запросов к бд можно использовать сервис (mock DB)[https://dev.to/techschoolguru/mock-db-for-testing-http-api-in-go-and-achieve-100-coverage-4pa9]
+Для тестирования запросов к бд можно использовать сервис [mock DB](https://dev.to/techschoolguru/mock-db-for-testing-http-api-in-go-and-achieve-100-coverage-4pa9)
 
 Ещё насчет бд PostgreSQL, можно установить системные переменные окружнеия PGUSER, PGPASSWORD, значения которых будут использоваться по-умолчанию.
 
@@ -59,7 +59,7 @@ Golang WebApp. ApiServer
 * Перед созданием пользователя теперь выполняется валидация данных
 
 По табличным тестам можно почитать такие материалы:
-* (Табличные тесты в Go с использованием Gomock)[https://habr.com/ru/companies/avito/articles/658907/]
-* (Табличные юнит тесты)[https://blog.not-a-kernel-guy.com/2018/08/01/table-driven-unit-tests/]
+* [Табличные тесты в Go с использованием Gomock](https://habr.com/ru/companies/avito/articles/658907/)
+* [Табличные юнит тесты](https://blog.not-a-kernel-guy.com/2018/08/01/table-driven-unit-tests/)
 
 Список использованных библиотек: bcrypt, ozzo-validation
