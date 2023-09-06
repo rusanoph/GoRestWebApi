@@ -61,7 +61,7 @@ func (s *APIServer) configureRouter() {
 	s.router.HandleFunc("/hello", s.handleHello())
 }
 
-// ConfigureStore
+// ConfigureStore ...
 func (s *APIServer) configureStore() error {
 	st := store.New(s.config.Store)
 	if err := st.Open(); err != nil {
@@ -73,6 +73,7 @@ func (s *APIServer) configureStore() error {
 	return nil
 }
 
+// handleHello ...
 func (s *APIServer) handleHello() http.HandlerFunc {
 	return func(w http.ResponseWriter, r *http.Request) {
 		io.WriteString(w, "Hello")
