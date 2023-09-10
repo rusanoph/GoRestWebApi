@@ -3,6 +3,8 @@
 **Must have:**
 * [Go Best Practices](https://github.com/codeship/go-best-practices)
 
+Summury по использованным библиотекам: testify (testing, assert), mux, toml, logrus, zerolog, flags, net (http, http/httptest), io, log, lib/pq, bcrypt, ozzo-validation, 
+
 ---
 
 Создание REST API.
@@ -77,3 +79,6 @@ Golang WebApp. ApiServer
 ---
 
 Урок 5. Регистрация и аутентификация
+
+* Регистрация производится по email'у и паролю, которые передаются в виде `.json`.
+* Аутентификация реализована, как сессия с идентификатором и cookie.
